@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="728.0" stylesheets="@holidayWindow.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.SystemUserRecords.DispositionStationsController">
+   <children>
+      <Label layoutX="96.0" layoutY="23.0" styleClass="header" text="Manage Disposition Stations" />
+      <Label layoutX="31.0" layoutY="79.0" styleClass="bold" text="Saved Stations" />
+      <Button fx:id="addButton" layoutX="518.0" layoutY="322.0" mnemonicParsing="false" onAction="#addVertex" prefHeight="65.0" prefWidth="148.0" styleClass="buttonUI" text="ADD" />
+      <Button fx:id="deleteButton" layoutX="518.0" layoutY="410.0" mnemonicParsing="false" onAction="#deleteHoliday" prefHeight="65.0" prefWidth="148.0" styleClass="buttonUI" text="DELETE" />
+      <TableView fx:id="vertexTable" layoutX="31.0" layoutY="117.0" prefHeight="345.0" prefWidth="434.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="48.0" text="ID" />
+          <TableColumn fx:id="countryCol" prefWidth="112.0" text="Country" />
+            <TableColumn fx:id="cityCol" prefWidth="105.0" text="City" />
+            <TableColumn fx:id="latCol" prefWidth="83.0" text="Latitude" />
+            <TableColumn fx:id="longCol" prefWidth="84.0" text="Longtitude" />
+        </columns>
+      </TableView>
+      <Label layoutX="525.0" layoutY="87.0" text="Country:" />
+      <Label layoutX="525.0" layoutY="163.0" text="City:" />
+      <ComboBox fx:id="countryChoiceBox" layoutX="525.0" layoutY="117.0" prefWidth="150.0" />
+      <ComboBox fx:id="cityChoiceBox" layoutX="525.0" layoutY="197.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

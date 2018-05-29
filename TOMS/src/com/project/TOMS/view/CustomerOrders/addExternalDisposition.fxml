@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="588.0" prefWidth="588.0" stylesheets="@addWindow.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.CustomerOrders.addExternalDispositionController">
+   <children>
+      <Label layoutX="122.0" layoutY="14.0" styleClass="header" text="Add New External Disposition" textFill="#a10000" />
+      <Label layoutX="43.0" layoutY="387.0" text="Start Date:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="198.0" prefHeight="20.0" prefWidth="118.0" styleClass="bold" text="Trailer Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="71.0" styleClass="bold" text="Carrier Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="carrierChoiceBox" layoutX="188.0" layoutY="66.0" prefHeight="31.0" prefWidth="242.0" />
+      <Button fx:id="confirmButton" layoutX="473.0" layoutY="64.0" mnemonicParsing="false" onAction="#addEntry" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CONFIRM" />
+      <Button fx:id="cancelButton" layoutX="473.0" layoutY="145.0" mnemonicParsing="false" onAction="#cancel" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CANCEL" />
+      <Label layoutX="43.0" layoutY="109.0" text="ID:" />
+      <Label layoutX="43.0" layoutY="139.0" text="Company:" />
+      <Label layoutX="251.0" layoutY="111.0" text="Mode: " />
+      <Label fx:id="carrierIdLablel" layoutX="126.0" layoutY="109.0" text="Label" />
+      <Label fx:id="carrierCompanyLabel" layoutX="125.0" layoutY="139.0" text="Label" />
+      <Label fx:id="carrierModeLabel" layoutX="333.0" layoutY="111.0" text="Label" />
+      <Label layoutX="43.0" layoutY="232.0" text="ID: " />
+      <Label layoutX="43.0" layoutY="255.0" text="Plate Number: " />
+      <Label layoutX="41.0" layoutY="276.0" text="Availability Status:" />
+      <Label layoutX="41.0" layoutY="298.0" text="Condition Status:" />
+      <Label fx:id="trailerIdLabel" layoutX="174.0" layoutY="232.0" text="Label" />
+      <Label fx:id="trailerPlateNumber" layoutX="175.0" layoutY="254.0" text="Label" />
+      <Label fx:id="trailerAvailabilityStatus" layoutX="176.0" layoutY="276.0" text="Label" />
+      <Label fx:id="trailerConditionStatus" layoutX="177.0" layoutY="298.0" text="Label" />
+      <Label layoutX="32.0" layoutY="345.0" styleClass="bold" text="Disposition Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startDate" layoutX="133.0" layoutY="382.0" prefHeight="31.0" prefWidth="265.0" />
+      <Label layoutX="273.0" layoutY="231.0" text="Country: " />
+      <Label fx:id="trailerCountry" layoutX="355.0" layoutY="230.0" text="Label" />
+      <Label layoutX="276.0" layoutY="296.0" text="Post Code:" />
+      <Label fx:id="trailerPostCode" layoutX="357.0" layoutY="296.0" text="Label" />
+      <Label layoutX="275.0" layoutY="275.0" text="Street" />
+      <Label fx:id="trailerStreet" layoutX="356.0" layoutY="273.0" text="Label" />
+      <Label layoutX="274.0" layoutY="253.0" text="City: " />
+      <Label fx:id="trailerCity" layoutX="355.0" layoutY="252.0" text="Label" />
+      <Label layoutX="43.0" layoutY="424.0" text="Finish Date:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="finishDate" layoutX="135.0" layoutY="419.0" prefHeight="31.0" prefWidth="265.0" />
+      <Label layoutX="251.0" layoutY="139.0" text="Role: " />
+      <Label fx:id="carrierRoleLabel" layoutX="333.0" layoutY="139.0" text="Label" />
+      <Label layoutX="36.0" layoutY="491.0" styleClass="bold" text="Origin Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="553.0" styleClass="bold" text="Destination Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="sourceVertexChoiceBox" layoutX="219.0" layoutY="482.0" prefHeight="29.0" prefWidth="242.0" />
+      <ChoiceBox fx:id="destinationVertexChoiceBox" layoutX="218.0" layoutY="549.0" prefHeight="29.0" prefWidth="242.0" />
+   </children>
+</AnchorPane>

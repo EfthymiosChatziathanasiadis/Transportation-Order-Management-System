@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="268.0" prefWidth="628.0" stylesheets="@../CustomerOrders/addWindow.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.CarrierRecords.addCarrierController">
+   <children>
+      <Label layoutX="213.0" layoutY="14.0" styleClass="header" text="Edit Carrier" textFill="#a10000" />
+      <Label layoutX="32.0" layoutY="71.0" styleClass="bold" text="Carrier Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmButton" layoutX="473.0" layoutY="64.0" mnemonicParsing="false" onAction="#editEntry" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CONFIRM" />
+      <Button fx:id="cancelButton" layoutX="473.0" layoutY="145.0" mnemonicParsing="false" onAction="#cancel" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CANCEL" />
+      <RadioButton fx:id="seaRadio" layoutX="288.0" layoutY="164.0" mnemonicParsing="false" text="Sea">
+         <font>
+            <Font size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="roadRadio" layoutX="116.0" layoutY="164.0" mnemonicParsing="false" text="Road">
+         <font>
+            <Font size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="railRadio" layoutX="202.0" layoutY="164.0" mnemonicParsing="false" text="Rail">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="internalRadio" layoutX="116.0" layoutY="211.0" mnemonicParsing="false" text="Internal">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="externalRadio" layoutX="246.0" layoutY="211.0" mnemonicParsing="false" text="External">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="47.0" layoutY="118.0" text="Company: " />
+      <TextField fx:id="carrierCompanyField" layoutX="119.0" layoutY="116.0" />
+      <Label layoutX="48.0" layoutY="211.0" text="Role: " />
+      <Label layoutX="47.0" layoutY="163.0" text="Mode: " />
+      <Label layoutX="34.0" layoutY="34.0" styleClass="bold" text="ID:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="idLabel" layoutX="58.0" layoutY="36.0" text="Label" />
+   </children>
+</AnchorPane>

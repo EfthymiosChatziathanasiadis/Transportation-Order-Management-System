@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.CustomerOrders.CustomerOrdersController">
+   <children>
+      <TextField fx:id="searchField" layoutX="30.0" layoutY="22.0" prefHeight="27.0" prefWidth="704.0" promptText="Search Vehicle" />
+      <Button layoutX="970.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="146.0" styleClass="buttonUI" text="SEARCH" />
+      <TableView fx:id="customerOrderTable" layoutX="24.0" layoutY="102.0" prefHeight="533.0" prefWidth="1105.0">
+         <columns>
+            <TableColumn fx:id="typeCol" prefWidth="58.0" text="Type" />
+            <TableColumn fx:id="idCol" prefWidth="51.0" text="ID" />
+            <TableColumn prefWidth="236.0" text="Date">
+               <columns>
+                  <TableColumn fx:id="startCol" prefWidth="109.0" styleClass="colRegNum" text="Start" />
+                  <TableColumn fx:id="finishCol" prefWidth="111.0" text="Finish" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="colLastService1" prefWidth="131.0" text="Address">
+               <columns>
+                  <TableColumn fx:id="originCol" prefWidth="131.0" text="Origin" />
+                  <TableColumn fx:id="destinationCol" prefWidth="120.0" text="Destination" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="trailerPlateCol" prefWidth="102.0" text="Trailer Plate" />
+            <TableColumn fx:id="tarriffCol" prefWidth="76.0" text="Tarriff" />
+            <TableColumn fx:id="customerCol" prefWidth="89.0" text="Customer " />
+            <TableColumn fx:id="disponentCol" prefWidth="110.0" text="Disponent" />
+            <TableColumn fx:id="routingStatus" prefWidth="146.0" styleClass="bold" text="Status" />
+         </columns>
+      </TableView>
+      <ChoiceBox fx:id="searchOptions" layoutX="772.0" layoutY="22.0" prefHeight="27.0" prefWidth="171.0" />
+      <Label layoutX="34.0" layoutY="60.0" prefHeight="30.0" prefWidth="244.0" styleClass="header" text="VIEW ORDERS BY:" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="exportRadio" layoutX="547.0" layoutY="66.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="87.0" styleClass="bold" text="Export">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="importRadio" layoutX="344.0" layoutY="67.0" mnemonicParsing="false" styleClass="bold" text="Import">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="1132.0" layoutY="399.0" mnemonicParsing="false" onAction="#addCustomerOrder" prefHeight="51.0" prefWidth="146.0" styleClass="buttonUI" text="ADD" />
+      <Button layoutX="1132.0" layoutY="582.0" mnemonicParsing="false" onAction="#delete" prefHeight="51.0" prefWidth="146.0" styleClass="buttonUI" text="DELETE" />
+      <Button layoutX="1133.0" layoutY="492.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="51.0" prefWidth="146.0" styleClass="buttonUI" text="EDIT" />
+      <Label layoutX="1149.0" layoutY="102.0" prefHeight="30.0" prefWidth="137.0" text="TRANSPORT" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="bookings" layoutX="1132.0" layoutY="146.0" mnemonicParsing="false" onAction="#viewDispositions" prefHeight="51.0" prefWidth="146.0" styleClass="buttonUI" text="VIEW ROUTE" />
+      <Label layoutX="1137.0" layoutY="226.0" prefHeight="30.0" prefWidth="137.0" text="ORDER DETAILS" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="1132.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleVehicleDetails" prefHeight="51.0" prefWidth="146.0" styleClass="buttonUI" text="VIEW DETAILS" />
+      <Separator layoutX="1140.0" layoutY="352.0" prefHeight="17.0" prefWidth="137.0" />
+      <Button fx:id="resetButton" layoutX="1132.0" layoutY="21.0" mnemonicParsing="false" onAction="#viewMap" prefHeight="51.0" prefWidth="146.0" styleClass="buttonUI" text="VIEW MAP" />
+      <ChoiceBox fx:id="viewChoices" layoutX="772.0" layoutY="62.0" prefHeight="27.0" prefWidth="171.0" />
+      <Button layoutX="970.0" layoutY="61.0" mnemonicParsing="false" onAction="#outputTableData" prefHeight="30.0" prefWidth="146.0" styleClass="bold" text="VIEW ALL" />
+      <Label layoutX="1161.0" layoutY="117.0" prefHeight="30.0" prefWidth="137.0" text="ROUTING" textFill="#283593">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

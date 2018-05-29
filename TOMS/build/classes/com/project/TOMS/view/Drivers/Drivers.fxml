@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.Drivers.DriversController">
+   <children>
+      <TableView fx:id="driversTable" layoutX="27.0" layoutY="79.0" minWidth="600.0" prefHeight="620.0" prefWidth="916.0">
+         <columns>
+            <TableColumn fx:id="idCol" minWidth="65.0" prefWidth="118.0" text="Id" />
+            <TableColumn fx:id="firstNameCol" minWidth="100.0" prefWidth="198.0" text="First Name" />
+            <TableColumn fx:id="lastNameCol" minWidth="100.0" prefWidth="209.0" text="Last Name" />
+            <TableColumn fx:id="availabilityStatusCol" minWidth="60.0" prefWidth="209.0" text="Availability Status" />
+            <TableColumn fx:id="locationCol" minWidth="65.0" prefWidth="180.0" text="Location" />
+         </columns>
+      </TableView>
+      <TextField fx:id="searchField" layoutX="27.0" layoutY="27.0" prefHeight="25.0" prefWidth="507.0" promptText="Search a Driver" />
+      <Button layoutX="541.0" layoutY="24.0" mnemonicParsing="false" onAction="#clearSearchField" prefHeight="25.0" prefWidth="25.0" styleClass="buttonUI" text="x" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="searchOptions" layoutX="575.0" layoutY="27.0" prefWidth="180.0" />
+      <Button fx:id="searchButton" alignment="TOP_CENTER" layoutX="763.0" layoutY="26.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="180.0" styleClass="buttonUI" text="Search" textAlignment="CENTER" />
+      <VBox layoutX="966.0" layoutY="33.0" prefWidth="294.0">
+         <children>
+            <HBox prefHeight="25.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="161.0" styleClass="header" text="Driver Details">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="fieldLabel11" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="296.0" text="This field is required" textAlignment="RIGHT" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstNameField" alignment="TOP_LEFT" maxWidth="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="294.0" promptText="First Name">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="fieldLabel1" alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="296.0" text="This field is required" textAlignment="RIGHT" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="lastNameField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="290.0" promptText="Last Name">
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </TextField>
+            <Label alignment="TOP_RIGHT" prefHeight="17.0" prefWidth="296.0" text="This field is required" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" prefHeight="30.0" prefWidth="192.0" styleClass="header" text="Driver Location">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" layoutX="15.0" layoutY="241.0" prefHeight="17.0" prefWidth="296.0" text="This field is required" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="vertexChoiceBox" prefWidth="150.0" />
+            <Label fx:id="fieldLabel6" alignment="TOP_RIGHT" layoutX="10.0" layoutY="429.0" prefHeight="17.0" prefWidth="296.0" text="This field is required" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" prefHeight="20.0" prefWidth="298.0" styleClass="bold" text="Driver Availability Status">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="fieldLabel61" alignment="TOP_RIGHT" prefHeight="17.0" prefWidth="296.0" text="This field is required" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="23.0" prefWidth="294.0">
+               <children>
+                  <RadioButton fx:id="availableRadio" mnemonicParsing="false" selected="true" styleClass="bold" text="Available">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="customerType" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="unavaialableRadio" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="bold" text="Unavailable" toggleGroup="$customerType">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="fieldLabel611" alignment="TOP_RIGHT" prefHeight="17.0" prefWidth="296.0" text="This field is required" textFill="RED" visible="false">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Button fx:id="addButton" alignment="CENTER" maxWidth="308.0" mnemonicParsing="false" onAction="#addDriver" prefHeight="30.0" prefWidth="294.0" styleClass="buttonUI" text="Add Driver" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Separator layoutX="15.0" layoutY="340.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Separator>
+            <Button fx:id="deleteButton" alignment="CENTER" layoutX="10.0" layoutY="358.0" maxWidth="308.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="294.0" styleClass="buttonUI" text="Delete Driver" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="editButton" alignment="CENTER" layoutX="966.0" layoutY="503.0" maxWidth="308.0" mnemonicParsing="false" onAction="#editDriver" prefHeight="32.0" prefWidth="188.0" styleClass="buttonUI" text="Edit Driver" textAlignment="CENTER" />
+      <Button fx:id="editButton1" alignment="CENTER" layoutX="1162.0" layoutY="503.0" maxWidth="308.0" mnemonicParsing="false" onAction="#confirmEditDriver" prefHeight="32.0" prefWidth="98.0" styleClass="buttonUI" text="Confirm" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

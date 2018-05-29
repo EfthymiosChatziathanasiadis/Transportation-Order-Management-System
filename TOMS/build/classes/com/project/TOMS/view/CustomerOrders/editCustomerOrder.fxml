@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="646.0" prefWidth="658.0" stylesheets="@addWindow.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.CustomerOrders.editCustomerOrderController">
+   <children>
+      <Label layoutX="159.0" layoutY="14.0" styleClass="header" text="Edit Customer Order" textFill="#a10000" />
+      <Label layoutX="43.0" layoutY="387.0" text="Start Date:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="198.0" prefHeight="20.0" prefWidth="141.0" styleClass="bold" text="Available Trailers">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="71.0" styleClass="bold" text="Customer Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="483.0" layoutY="346.0" styleClass="bold" text="Disponent Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmButton" layoutX="473.0" layoutY="64.0" mnemonicParsing="false" onAction="#editEntry" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CONFIRM" />
+      <Button fx:id="cancelButton" layoutX="473.0" layoutY="145.0" mnemonicParsing="false" onAction="#cancel" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CANCEL" />
+      <RadioButton fx:id="radioExport" layoutX="360.0" layoutY="346.0" mnemonicParsing="false" text="Export">
+         <font>
+            <Font size="14.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="radioImport" layoutX="188.0" layoutY="346.0" mnemonicParsing="false" text="Import">
+         <font>
+            <Font size="14.0" />
+         </font></RadioButton>
+      <Label layoutX="43.0" layoutY="109.0" text="ID:" />
+      <Label layoutX="43.0" layoutY="130.0" text="Company:" />
+      <Label layoutX="43.0" layoutY="151.0" text="Telephone:" />
+      <Label fx:id="customerIdLablel" layoutX="125.0" layoutY="109.0" text="Label" />
+      <Label fx:id="customerCompanyLabel" layoutX="125.0" layoutY="130.0" text="Label" />
+      <Label fx:id="customerTelephoneLabel" layoutX="125.0" layoutY="151.0" text="Label" />
+      <Label layoutX="43.0" layoutY="246.0" text="ID: " />
+      <Label layoutX="43.0" layoutY="265.0" text="Plate Number: " />
+      <Label layoutX="41.0" layoutY="284.0" text="Availability Status:" />
+      <Label layoutX="41.0" layoutY="302.0" text="Condition Status:" />
+      <Label fx:id="trailerId" layoutX="185.0" layoutY="246.0" text="Label" />
+      <Label fx:id="trailerPlateNumber" layoutX="186.0" layoutY="265.0" text="Label" />
+      <Label fx:id="trailerAvailabilityStatus" layoutX="187.0" layoutY="283.0" text="Label" />
+      <Label fx:id="trailerConditionStatus" layoutX="188.0" layoutY="302.0" text="Label" />
+      <Label layoutX="32.0" layoutY="345.0" styleClass="bold" text="Order Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="494.0" layoutY="383.0" text="ID: " />
+      <DatePicker fx:id="startDate" layoutX="133.0" layoutY="382.0" onAction="#datePickerAction" prefHeight="31.0" prefWidth="265.0" />
+      <Label layoutX="265.0" layoutY="111.0" text="Country: " />
+      <Label fx:id="customerCountry" layoutX="347.0" layoutY="111.0" text="Label" />
+      <Label layoutX="266.0" layoutY="130.0" text="City: " />
+      <Label fx:id="customerCity" layoutX="347.0" layoutY="130.0" text="Label" />
+      <Label layoutX="43.0" layoutY="424.0" text="Finish Date:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="finishDate" layoutX="135.0" layoutY="419.0" onAction="#datePickerAction" prefHeight="31.0" prefWidth="265.0" />
+      <Label layoutX="494.0" layoutY="402.0" text="Name: " />
+      <Label layoutX="494.0" layoutY="422.0" text="Surname: " />
+      <Label fx:id="disponentId" layoutX="567.0" layoutY="380.0" text="Label" />
+      <Label fx:id="disponentName" layoutX="567.0" layoutY="402.0" text="Label" />
+      <Label fx:id="disponentSurname" layoutX="567.0" layoutY="422.0" text="Label" />
+      <Label layoutX="481.0" layoutY="239.0" styleClass="bold" text="Quantity">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="275.0" text="Mass:" />
+      <Label fx:id="disponentId1" layoutX="587.0" layoutY="275.0" text="(dwt)" />
+      <TextField fx:id="massField" layoutX="529.0" layoutY="271.0" prefHeight="27.0" prefWidth="50.0" />
+      <Label layoutX="43.0" layoutY="14.0" prefHeight="30.0" prefWidth="39.0" styleClass="header" text="ID:" textFill="#a10000" />
+      <Label fx:id="idLable" layoutX="83.0" layoutY="22.0" text="Label" />
+      <Label layoutX="45.0" layoutY="483.0" styleClass="bold" text="Origin Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="557.0" styleClass="bold" text="Destination Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="customersChoiceBox" layoutX="190.0" layoutY="68.0" prefHeight="27.0" prefWidth="215.0" />
+      <ComboBox fx:id="trailersChoiceBox" layoutX="190.0" layoutY="197.0" prefHeight="27.0" prefWidth="215.0" />
+      <ComboBox fx:id="sourceVertexChoiceBox" layoutX="219.0" layoutY="480.0" onAction="#sourceChoiceBoxActions" prefWidth="150.0" />
+      <ComboBox fx:id="destinationVertexChoiceBox" layoutX="219.0" layoutY="554.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

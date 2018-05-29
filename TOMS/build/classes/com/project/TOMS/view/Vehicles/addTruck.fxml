@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="340.0" prefWidth="628.0" stylesheets="@addWindow.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.Vehicles.addTruckController">
+   <children>
+      <Label layoutX="213.0" layoutY="14.0" styleClass="header" text="Add New Truck" textFill="#a10000" />
+      <Button fx:id="confirmButton" layoutX="473.0" layoutY="64.0" mnemonicParsing="false" onAction="#addEntry" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CONFIRM" />
+      <Button fx:id="cancelButton" layoutX="473.0" layoutY="145.0" mnemonicParsing="false" onAction="#cancel" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CANCEL" />
+      <Label layoutX="42.0" layoutY="81.0" styleClass="bold" text="Truck Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="notAvailableRadio" layoutX="316.0" layoutY="175.0" mnemonicParsing="false" text="Not Available">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="availableRadio" layoutX="212.0" layoutY="174.0" mnemonicParsing="false" text="Available">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="damagedRadio" layoutX="213.0" layoutY="225.0" mnemonicParsing="false" text="Damaged">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="57.0" layoutY="128.0" text="Plate Number:" />
+      <TextField fx:id="trailerPlateNumber" layoutX="160.0" layoutY="126.0" />
+      <Label layoutX="55.0" layoutY="222.0" text="Condition Status: " />
+      <Label layoutX="55.0" layoutY="173.0" text="Availability Status:" />
+      <RadioButton fx:id="notDamagedRadio" layoutX="334.0" layoutY="225.0" mnemonicParsing="false" text="Not Damaged">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="50.0" layoutY="295.0" styleClass="bold" text="Truck Location">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="vertexChoiceBox" layoutX="188.0" layoutY="291.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

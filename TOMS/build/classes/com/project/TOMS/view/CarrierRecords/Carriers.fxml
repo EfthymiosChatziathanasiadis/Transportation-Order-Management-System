@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.CarrierRecords.CarriersController">
+   <children>
+      <TextField fx:id="search" layoutX="53.0" layoutY="38.0" prefHeight="31.0" prefWidth="573.0" promptText="Please enter a term and a filter to search for:" />
+      <ChoiceBox fx:id="searchOpt" layoutX="640.0" layoutY="38.0" prefHeight="31.0" prefWidth="170.0" />
+      <Button fx:id="searchButton" alignment="TOP_CENTER" layoutX="825.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#handleSearch" prefHeight="31.0" prefWidth="150.0" styleClass="buttonUI" text="SEARCH" textAlignment="CENTER" />
+      <Button alignment="CENTER" layoutX="1017.0" layoutY="38.0" maxWidth="308.0" mnemonicParsing="false" onAction="#addCarrier" prefHeight="50.0" prefWidth="230.0" styleClass="buttonUI" text="Add Carrier" textAlignment="CENTER" />
+      <Button fx:id="editButton" alignment="CENTER" layoutX="1017.0" layoutY="109.0" maxWidth="308.0" mnemonicParsing="false" onAction="#editCarrier" prefHeight="50.0" prefWidth="230.0" styleClass="buttonUI" text="Edit Carrier" textAlignment="CENTER" />
+      <Button fx:id="deleteButton" alignment="CENTER" layoutX="1017.0" layoutY="179.0" maxWidth="308.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="230.0" styleClass="buttonUI" text="Delete Carrier" textAlignment="CENTER" />
+      <TableView fx:id="carrierTable" layoutX="53.0" layoutY="89.0" minWidth="600.0" prefHeight="589.0" prefWidth="922.0">
+         <placeholder>
+            <Label text="No results" />
+         </placeholder>
+         <columns>
+            <TableColumn fx:id="idCol" minWidth="100.0" prefWidth="120.0" text="Carrier ID" />
+            <TableColumn fx:id="companyCol" minWidth="100.0" prefWidth="321.99998474121094" text="Company" />
+            <TableColumn fx:id="modeCol" minWidth="125.0" prefWidth="254.0" text="Transport Mode" />
+            <TableColumn fx:id="roleCol" minWidth="80.0" prefWidth="225.0" text="Carrier Role" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="658.0" stylesheets="@addWindow.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.TOMS.view.CustomerOrders.addInternalDispositionController">
+   <children>
+      <Label layoutX="173.0" layoutY="14.0" styleClass="header" text="Add New Internal Disposition" textFill="#a10000" />
+      <Label layoutX="43.0" layoutY="387.0" text="Start Date:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="208.0" prefHeight="20.0" prefWidth="118.0" styleClass="bold" text="Truck Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="71.0" styleClass="bold" text="Driver Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="trucksChoiceBox" layoutX="189.0" layoutY="203.0" prefHeight="31.0" prefWidth="242.0" />
+      <ChoiceBox fx:id="driversChoiceBox" layoutX="188.0" layoutY="66.0" prefHeight="31.0" prefWidth="242.0" />
+      <Button fx:id="confirmButton" layoutX="473.0" layoutY="64.0" mnemonicParsing="false" onAction="#addInternalDisposition" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CONFIRM" />
+      <Button fx:id="cancelButton" layoutX="473.0" layoutY="145.0" mnemonicParsing="false" onAction="#cancel" prefHeight="65.0" prefWidth="100.0" styleClass="buttonUI" text="CANCEL" />
+      <Label layoutX="43.0" layoutY="109.0" text="ID:" />
+      <Label layoutX="43.0" layoutY="130.0" text="First Name:" />
+      <Label layoutX="43.0" layoutY="151.0" text="Last Name:" />
+      <Label fx:id="driverIdLabel" layoutX="174.0" layoutY="109.0" text="Label" />
+      <Label fx:id="driverFirstNameLabel" layoutX="174.0" layoutY="130.0" text="Label" />
+      <Label fx:id="driverLastNameLabel" layoutX="174.0" layoutY="151.0" text="Label" />
+      <Label layoutX="43.0" layoutY="246.0" text="ID: " />
+      <Label layoutX="43.0" layoutY="265.0" text="Plate Number: " />
+      <Label layoutX="41.0" layoutY="284.0" text="Availability Status:" />
+      <Label layoutX="41.0" layoutY="302.0" text="Condition Status:" />
+      <Label fx:id="truckIdLabel" layoutX="174.0" layoutY="246.0" text="Label" />
+      <Label fx:id="truckPlateNumberLabel" layoutX="175.0" layoutY="265.0" text="Label" />
+      <Label fx:id="truckAvailabilityStatusLabel" layoutX="176.0" layoutY="283.0" text="Label" />
+      <Label fx:id="truckConditionStatusLabel" layoutX="177.0" layoutY="302.0" text="Label" />
+      <Label layoutX="32.0" layoutY="345.0" styleClass="bold" text="Disposition Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startDate" layoutX="133.0" layoutY="382.0" onAction="#datepickerAction" prefHeight="31.0" prefWidth="265.0" />
+      <Label layoutX="265.0" layoutY="111.0" text="Country: " />
+      <Label fx:id="driverCountryLabel" layoutX="347.0" layoutY="111.0" text="Label" />
+      <Label layoutX="266.0" layoutY="130.0" text="City: " />
+      <Label fx:id="driverCityLabel" layoutX="347.0" layoutY="130.0" text="Label" />
+      <Label layoutX="273.0" layoutY="249.0" text="Country: " />
+      <Label fx:id="truckCountryLabel" layoutX="355.0" layoutY="249.0" text="Label" />
+      <Label layoutX="274.0" layoutY="268.0" text="City: " />
+      <Label fx:id="truckCityLabel" layoutX="355.0" layoutY="268.0" text="Label" />
+      <Label layoutX="43.0" layoutY="424.0" text="Finish Date:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="finishDate" layoutX="135.0" layoutY="419.0" onAction="#datepickerAction" prefHeight="31.0" prefWidth="265.0" />
+      <Label layoutX="35.0" layoutY="483.0" styleClass="bold" text="Origin Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="545.0" styleClass="bold" text="Destination Address">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="473.0" layoutY="341.0" styleClass="bold" text="Internal Carrier Details">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="375.0" text="ID: " />
+      <Label layoutX="482.0" layoutY="394.0" text="Company: " />
+      <Label layoutX="483.0" layoutY="413.0" text="Mode: " />
+      <Label layoutX="484.0" layoutY="431.0" text="Role: " />
+      <Label fx:id="carrierIdLabel" layoutX="561.0" layoutY="375.0" text="Label" />
+      <Label fx:id="carrierCompanyLabel" layoutX="562.0" layoutY="394.0" text="Label" />
+      <Label fx:id="carrierModeLabel" layoutX="563.0" layoutY="412.0" text="Label" />
+      <Label fx:id="carrierRoleLabel" layoutX="564.0" layoutY="431.0" text="Label" />
+      <Label layoutX="42.0" layoutY="171.0" text="Availability Status:" />
+      <Label fx:id="driverAvailabilityStatusLabel" layoutX="174.0" layoutY="171.0" text="Label" />
+      <ComboBox fx:id="sourceVertexChoiceBox" layoutX="208.0" layoutY="480.0" onAction="#sourceBoxAction" prefHeight="27.0" prefWidth="242.0" />
+      <ComboBox fx:id="destinationVertexChoiceBox" layoutX="210.0" layoutY="542.0" prefHeight="27.0" prefWidth="242.0" />
+   </children>
+</AnchorPane>
